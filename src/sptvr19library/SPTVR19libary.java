@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sptvr19libary;
+package sptvr19library;
 
 /**
  *
@@ -15,7 +15,8 @@ public class SPTVR19libary {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        App app = new App();
+       App app = new App();
+        app.run();
     }
     
 }
