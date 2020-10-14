@@ -5,6 +5,13 @@
  */
 package tools.managers;
 
+
+/**
+ *
+ * @author user
+ */
+
+
 import entity.Book;
 import java.util.Scanner;
 
@@ -16,21 +23,35 @@ public class BookManager {
     public Book createBook() {
         Book book = new Book();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("---- Создание книги ----");
-        System.out.println("----название книги----");
+        System.out.println("--- Создание книги ---");
+        System.out.print("Название книги: ");
         book.setName(scanner.nextLine());
-        System.out.println("Автор книги");
+        System.out.print("Автор книги: ");
         book.setAuthor(scanner.nextLine());
-        System.out.println("Год издания книги");
-        book.netPublishedYear(scanner.nextInt());
+        System.out.print("Год издания книги: ");
+        book.setPublishedYear(scanner.nextInt());
         return book;
-        
     }
-    public void addBookToArray(Book,book,)    
-        
-        
-        
-    
+    public void addBookToArray(Book book, Book[] books){
+        for (int i = 0; i < books.length; i++) {
+            if(books[i] == null){
+                books[i]=book;
+                break;
+            }
+        }
+    }
+
+    public void printListBooks(Book[] books) {
+        for (int i = 0; i < books.length; i++) {
+            if(books[i]!= null){
+                System.out.printf("%3d. Название книги: %s%nАвтор: %s%n"
+                        ,i+1
+                        ,books[i].getName()
+                        ,books[i].getAuthor()
+                );
+                System.out.println("--------------------------------");
+            }
+        }
     }
     
 }
