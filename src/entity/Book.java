@@ -56,6 +56,10 @@ public class Book {
                 + ", publishedYear=" + publishedYear 
                 + '}';
     }
+
+    public void netPublishedYear(int nextInt) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

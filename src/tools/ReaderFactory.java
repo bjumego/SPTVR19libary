@@ -5,7 +5,6 @@
  */
 package tools;
 
-import entity.Book;
 import entity.Reader;
 import java.util.Scanner;
 
